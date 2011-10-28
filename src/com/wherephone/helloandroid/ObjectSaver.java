@@ -50,7 +50,6 @@ public class ObjectSaver {
 		   Log.d(TAG, "before try");
 		   try
 		   {
-
 			   File topLevelDir = context.getDir(PATH, Context.MODE_WORLD_READABLE);
 			   Log.d(TAG, "reading topLevelDir " + topLevelDir);
 			   String[] files = topLevelDir.list();
