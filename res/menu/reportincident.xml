@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Assistance" android:visible="true" android:enabled="true" android:id="@+id/assistance">
+        <menu>
+            <item android:title="Escort to Car" android:id="@+id/escort"></item>
+            <item android:title="Repair Flat Tire" android:id="@+id/flat"></item>
+            <item android:title="Jump Start Vehicle" android:id="@+id/jump"></item>
+        </menu>
+    </item>
+    <item android:title="Automobile" android:visible="true" android:enabled="true" android:id="@+id/automobile">
+        <menu>
+            <item android:title="Accident-No Injury" android:id="@+id/noinjury"></item>
+            <item android:title="Accident-Injury" android:id="@+id/injury"></item>
+            <item android:title="Accident - Hit and Run" android:id="@+id/hitandrun"></item>
+            <item android:title="Break in with property theft" android:id="@+id/carbreak"></item>
+        </menu>
+    </item>       
+</menu>

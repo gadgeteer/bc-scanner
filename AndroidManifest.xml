@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.wherephone.helloandroid"
+      android:versionName="Release Candidate 1" android:versionCode="2">
+    <uses-sdk android:minSdkVersion="4" />
+    
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    
+    <application 
+    	android:icon="@drawable/ussa" 
+    	android:label="@string/app_name" 
+    	android:debuggable="true">
+        
+        <activity android:name=".UserIdEntry" android:label="@string/app_name" >
+   <!--      <activity android:name=".HelloAndroid"
+                  android:label="@string/app_name"> --> 
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+      
+       <!-- two lines below make TourPositive main app -->
+       			<category android:name="android.intent.category.HOME"/> 
+                <category android:name="android.intent.category.DEFAULT" /> 
+                
+                
+                
+            </intent-filter>
+            
+
+            
+        </activity>
+        <activity android:name="ScanSelector"></activity>
+        <activity android:name="MultipleChoiceEntry"></activity>
+        <activity android:name="NumericEntry"></activity>
+        <activity android:name="ReferTrailer"></activity>
+        <service android:name="BackgroundDataSender"></service>
+        <activity android:name="ReportIncident"></activity>
+        
+
+    </application>
+</manifest>

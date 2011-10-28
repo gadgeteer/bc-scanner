@@ -1,0 +1,45 @@
+
+    <LinearLayout android:id="@+id/linearLayout1" 
+    				xmlns:android="http://schemas.android.com/apk/res/android" 
+    				android:orientation="vertical" 
+    				android:background="#FFE877" 
+    				android:fitsSystemWindows="true" 
+    				android:layout_height="fill_parent" 
+    				android:layout_width="fill_parent">
+        <TextView android:textSize="15pt" android:layout_width="fill_parent" android:id="@+id/TextView01" android:text="@string/userid" android:layout_height="50dip" android:textColor="#000000"></TextView>
+        <TextView 
+        	android:textSize="15pt" 
+        	android:layout_width="fill_parent" 
+        	android:id="@+id/UserEntry" 
+        	android:layout_height="50dip" 
+        	android:text="@string/blank" 
+        	android:onClick="onEdit"
+        	android:clickable="true"
+        	android:inputType="textCapCharacters" android:textColor="#555577">
+        </TextView>
+        <TextView 
+        	android:layout_height="50dip" 
+        	android:id="@+id/textView2"  
+        	android:layout_width="fill_parent" 
+        	android:textSize="15pt" 
+        	android:text="@string/clientid" 
+        	android:textColor="#000000"></TextView>
+        <TextView 
+        	android:layout_height="50dip" 
+        	android:id="@+id/ClientEntry" 
+        	android:onClick="onEdit" 
+        	android:layout_width="fill_parent" 
+        	android:textSize="15pt" 
+        	android:inputType="textCapCharacters" 
+        	android:clickable="true"
+        	android:textColor="#555577"
+        	android:text="@string/blank"></TextView>
+        <Button android:layout_height="12mm" 
+        	android:textSize="17pt" 
+        	android:id="@+id/button1" 
+        	android:onClick="onClick" 
+        	android:layout_width="35mm" 
+        	android:text="@string/buttonUpdate" 
+        	android:maxHeight="35mm">
+        </Button>
+    </LinearLayout>

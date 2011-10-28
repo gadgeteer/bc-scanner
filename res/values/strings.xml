@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello"><b>Press</b> Below scan</string>
+    <string name="app_name">TourPositive</string>
+    <string name="buttonUpdate">Scan</string>
+    <string name="editText">Edit</string>
+    <string name="titleStatus">Status</string>
+    <string name="userid">User ID</string>
+    <string name="clientid">Client ID</string>
+    <string name="blank"></string>
+    <string name="pressure">Pressure</string>
+    <string name="refer_status_prompt">Refrigerator Status</string>
+    <string-array name="refer_status_array">
+        <item>Cooling</item>
+        <item>Defrosting</item>
+        <item>Off</item>
+    </string-array>
+    <string name="fuel_level_prompt">Fuel Level</string>
+    <string-array name="fuel_level_array">
+        <item>Full</item>
+        <item>3/4</item>
+        <item>1/2</item>
+        <item>1/4</item>
+        <item>Empty</item>
+    </string-array>
+    <string name="trailer_status_prompt">Trailer Status</string>
+    <string-array name="trailer_status_array">
+        <item>Locked &amp; Sealed</item>
+        <item>Seal Broken</item>
+        <item>Empty</item>
+
+    </string-array>
+</resources>

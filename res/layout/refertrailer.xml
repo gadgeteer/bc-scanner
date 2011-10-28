@@ -1,0 +1,116 @@
+
+    <LinearLayout android:id="@+id/linearLayout1" 
+    				xmlns:android="http://schemas.android.com/apk/res/android" 
+    				android:layout_width="fill_parent" 
+    				android:orientation="vertical" 
+    				android:background="#FFE87C"
+    				
+    				android:isScrollContainer="true" android:scrollbars="vertical" android:layout_height="wrap_content">
+    	<ScrollView
+    		android:layout_width="fill_parent"
+        	android:layout_height="fill_parent">
+        	<LinearLayout
+        		android:orientation="vertical" 
+        		android:layout_width="fill_parent" 
+        		android:layout_height="wrap_content">
+		        <TextView android:textSize="15pt" 
+		        		android:layout_width="fill_parent" 
+		        		android:id="@+id/TrailerNumber" 
+		        		android:layout_height="50dip" 
+		        		android:text="Trailer Number"
+		        		android:textColor="#000000"
+		        	/>
+				<EditText
+		                android:id="@+id/trailer"
+		                android:layout_height="50dip" 
+		                android:textSize="12pt"
+		                android:layout_width="fill_parent" 
+		                android:inputType="number" 
+		                android:nextFocusDown="@+id/set"
+		         />   			
+		        <TextView android:textSize="15pt" 
+		        		android:layout_width="fill_parent" 
+		        		android:id="@+id/TextView01" 
+		        		android:layout_height="50dip" 
+		        		android:text="Set Point"
+		        		android:textColor="#000000"		
+		        />
+				<EditText
+		                android:id="@+id/set"
+		                android:layout_height="50dip" 
+		                android:textSize="12pt"
+		                android:layout_width="fill_parent"
+		                android:numeric="decimal"
+		                android:nextFocusDown="@+id/actual"
+		        />    
+		       	<TextView android:textSize="15pt" 
+		        		android:layout_width="fill_parent" 
+		        		android:id="@+id/TextView02" 
+		        		android:layout_height="50dip" 
+		        		android:text="Actual"
+		        		android:textColor="#000000"
+		        />
+				<EditText
+		                android:id="@+id/actual"
+		                android:layout_height="50dip" 
+		                android:textSize="12pt"
+		                android:layout_width="fill_parent" 
+		                android:inputType="numberDecimal" 
+		                android:nextFocusDown="@+id/spinner1"/>
+		        <TextView
+		        	android:layout_width="fill_parent"
+		        	android:layout_height="wrap_content"
+		        	android:layout_marginTop="10dip"
+		        	android:textSize="15pt"
+		        	android:textColor="#000000"
+		        	android:text="@string/refer_status_prompt"
+		    	/>        
+				<Spinner 
+					android:layout_width="fill_parent" 
+					android:layout_height="50dip"
+					android:textSize="14pt"
+					android:id="@+id/spinner1" 
+					android:prompt="@string/refer_status_prompt"
+				/>
+		        <TextView
+		        	android:layout_width="fill_parent"
+		        	android:layout_height="wrap_content"
+		        	android:layout_marginTop="10dip"
+		        	android:textSize="15pt"
+		        	android:textColor="#000000"
+		        	android:text="@string/fuel_level_prompt"
+		    	/>     				     
+				<Spinner 
+					android:layout_width="fill_parent" 
+					android:layout_height="50dip"
+					android:textSize="14pt"
+					android:id="@+id/spinner2" 
+					android:prompt="@string/fuel_level_prompt"
+				/>     
+				<TextView
+		        	android:layout_width="fill_parent"
+		        	android:layout_height="wrap_content"
+		        	android:layout_marginTop="10dip"
+		        	android:textSize="15pt"
+		        	android:textColor="#000000"
+		        	android:text="@string/trailer_status_prompt"
+		    	/>     				     
+				<Spinner 
+					android:layout_width="fill_parent" 
+					android:layout_height="50dip"
+					android:textSize="14pt"
+					android:id="@+id/spinner3" 
+					android:prompt="@string/trailer_status_prompt"
+				/>    
+			
+				<Button android:id="@+id/button1" 
+		          android:layout_height="12mm" 
+		          android:layout_weight="1" 
+		          android:text="Save" 
+		          android:textSize="17pt"
+		          android:onClick="onClick" android:layout_width="35mm">
+		        </Button>
+		    </LinearLayout>    
+
+        </ScrollView>
+    </LinearLayout>

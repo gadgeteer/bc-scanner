@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:orientation="vertical" android:layout_height="wrap_content" android:hapticFeedbackEnabled="true" android:background="#FFE87C">
+<TextView  
+    android:layout_width="fill_parent" 
+    android:id="@+id/textView1" 
+    android:layout_weight="1" 
+    android:layout_height="50dip" 
+    android:text="@string/hello"
+    android:textSize="15pt"
+    />
+<Button android:id="@+id/button1" 
+	android:layout_weight="1" 
+	android:layout_height="15mm" 
+	android:layout_width="45mm" 
+	android:textSize="17pt" android:text="@string/buttonUpdate">
+	</Button>
+    <!-- Title TextView-->
+    <!-- Status EditText -->
+	<!-- Update Button -->
+<TextView android:layout_height="12mm"
+	android:layout_width="wrap_content" 
+	android:id="@+id/textView2" 
+	android:height="12mm">
+	</TextView>
+<Button android:text="Button" 
+	android:id="@+id/button2" 
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content"
+	android:onClick="advanceOnClick"
+	>
+	</Button>
+</LinearLayout>
