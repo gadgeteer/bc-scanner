@@ -13,7 +13,7 @@ public class ReferDataPoint extends TourDataPoint {
 	ReferDataPoint(String user, String client){
 		super(user,client);
 	}
-	
+	// change on refer branch
 	public String getSendableData(){
 		StringBuffer returnString = new StringBuffer();
 		
