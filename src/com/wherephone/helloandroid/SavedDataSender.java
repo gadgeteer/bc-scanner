@@ -30,7 +30,7 @@ public class SavedDataSender extends Thread {
 		FileInputStream fis;
 		int numFiles = 0;
 		if (files != null){
-//		Log.d(TAG,"files not null");
+
 			numFiles = files.length;	
 		}
 		Log.d(TAG,"numFiles " + numFiles);

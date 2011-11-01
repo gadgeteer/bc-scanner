@@ -52,7 +52,7 @@ public class UserIdEntry extends Activity implements OnClickListener {
     	
     	Log.d(TAG, " after deleteOld");
     	TourDataPoint aPoint = new TourDataPoint("abc","123");
-    	ReferDataPoint rPoint = new ReferDataPoint("refer", "456");
+    	ReferDataPoint rPoint = new ReferDataPoint("refer2", "789");
     	rPoint.setSetPoint("32");
     	Log.d(TAG, " after TourPointCreated");
     	Log.d(TAG, "aPoint> " + aPoint.getClientID() + " " + aPoint.getUserId());
