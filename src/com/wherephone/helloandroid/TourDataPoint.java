@@ -39,6 +39,7 @@ public class TourDataPoint implements Serializable{
 	public String getSendableData(){
 		StringBuffer returnString = new StringBuffer();
 		
+		
 		return returnString.toString();
 	}
 

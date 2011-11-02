@@ -9,6 +9,10 @@ public class ReferDataPoint extends TourDataPoint {
 	private String setPoint;
 	private String actualTemp;
 	private String trailerNumber;
+	private String referStatus;
+	private String trailerStatus;
+	private String fuelLevel;
+
 
 	ReferDataPoint(String user, String client){
 		super(user,client);
@@ -44,6 +48,29 @@ public class ReferDataPoint extends TourDataPoint {
 
 	public String getTrailerNumber() {
 		return trailerNumber;
+	}
+	public void setTrailerStatus(String trailerStatus) {
+		this.trailerStatus = trailerStatus;
+	}
+	public String getTrailerStatus() {
+		return trailerStatus;
+	}
+	public void setReferStatus(String referStatus) {
+		this.referStatus = referStatus;
+	}
+	public String getReferStatus() {
+		return referStatus;
+	}
+	public String getFuelLevel() {
+		return fuelLevel;
+	}
+	public void setFuelLevel(String fuelLevel) {
+		this.fuelLevel = fuelLevel;
+	}
+	
+	public String toString(){
+		return "trailer:" + this.trailerNumber + " setPt:" + this.setPoint + " act:"  + this.actualTemp +
+				" referStatus:" + this.referStatus + " trailerStatus:" + this.trailerStatus +" fuel:" + this.fuelLevel;
 	}
 	
 }

@@ -49,12 +49,7 @@ public class NumericEntry extends Activity{
 		String date = (String) android.text.format.DateFormat.format("\"MM-dd-yyyy\",\"hh:mm:ss\"", new java.util.Date());
 
     	if (textField.getText().toString().length()==0){
-    		LayoutInflater inflater = getLayoutInflater();
-    		View toastRoot = inflater.inflate(R.layout.my_toast, null);
-    		Toast toast = new Toast(this);
-    		toast.setView(toastRoot);
-    		toast.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.CENTER_VERTICAL,0, 0);
-    		toast.show();
+    		warnOnNoDataEntered(this, (String) numericEntryLabel.getText());
 
     		return;
     	}
@@ -76,6 +71,18 @@ public class NumericEntry extends Activity{
 		Intent myIntent = new Intent(this, ScanSelector.class );
 		myIntent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);
 		startActivity(myIntent);
+	}
+
+	public static void warnOnNoDataEntered(Activity theScreen, String prompt) {
+		LayoutInflater inflater = theScreen.getLayoutInflater();
+		View toastRoot = inflater.inflate(R.layout.my_toast, null);
+
+		Toast toast = Toast.makeText(theScreen, "You must enter a number for " + prompt, Toast.LENGTH_SHORT);
+		
+		toast.setView(toastRoot);
+		toast.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.CENTER_VERTICAL,0, 0);
+	//	toast.setText("You must enter a number for " + prompt);
+		toast.show();
 	}
 
 }

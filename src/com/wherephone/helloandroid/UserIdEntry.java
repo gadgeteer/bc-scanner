@@ -1,6 +1,9 @@
 package com.wherephone.helloandroid;
 
 
+import java.util.ArrayList;
+import java.util.Iterator;
+
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.ActivityManager.RunningServiceInfo;
@@ -53,13 +56,29 @@ public class UserIdEntry extends Activity implements OnClickListener {
     	Log.d(TAG, " after deleteOld");
     	TourDataPoint aPoint = new TourDataPoint("abc","123");
     	ReferDataPoint rPoint = new ReferDataPoint("refer2", "789");
-    	rPoint.setSetPoint("32");
+    	rPoint.setSetPoint("28");
+    	rPoint.setTrailerNumber("123456");
     	Log.d(TAG, " after TourPointCreated");
     	Log.d(TAG, "aPoint> " + aPoint.getClientID() + " " + aPoint.getUserId());
-    	new ObjectSaver(rPoint, getApplicationContext());
+    	ObjectSaver.save(rPoint, getApplicationContext());
+    	ObjectSaver.save(aPoint, getApplicationContext());
     	Log.d(TAG, " after ObjectSaver created");
-    	ObjectSaver.getObject(getApplicationContext());
+    	
+    	ArrayList<TourDataPoint> points = ObjectSaver.getObject(getApplicationContext());
     	Log.d(TAG, " after getObject");
+    	Iterator<TourDataPoint> pointsList = points.iterator();
+    	while (pointsList.hasNext()){
+    		TourDataPoint somePoint =  pointsList.next();
+    		Log.d(TAG, " pointsList " + somePoint);
+			if (somePoint instanceof ReferDataPoint) { // must check refer first all refers are tours
+				rPoint = (ReferDataPoint) somePoint;
+				Log.d(TAG, " a refer setPoint>"+rPoint.getSetPoint());
+			} else if (somePoint instanceof TourDataPoint) {
+				aPoint = (TourDataPoint) somePoint;
+				Log.d(TAG, " still a tourPoint");
+			}
+    		
+    	}
     	
     	
     	
